@@ -38,11 +38,13 @@ public class ConsoleExercises {
         double roomLength = input.nextDouble();
         double roomWidth = input.nextDouble();
         double roomHeight = input.nextDouble();
-        double roomArea = roomLength * roomWidth * roomHeight;
+        double roomArea = roomLength * roomWidth;
+        double roomPerimeter = (roomHeight * 2) + (roomLength * 2);
 
         input.nextLine();
 
-        System.out.printf("The area of your room is %.2fft %n", roomArea);
+        System.out.printf("The area of your room is %.2fft%n", roomArea);
+        System.out.printf("The perimeter of your room is %.2fft%n", roomPerimeter);
 
         //currently does not work with decimals
         input.close();
