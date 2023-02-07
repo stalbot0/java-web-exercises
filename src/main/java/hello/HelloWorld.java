@@ -15,23 +15,31 @@ public class HelloWorld {
         String myString = "This is a string,\nand my name is Stephen";
         System.out.println(myString);
 
-        long myNumber = 123; // we can not assign float to this because it is not a single precision floating point
+//        myString = 'c'; //we can't do this because '' is a char value and not a string
+//        myString = 3.14159; //we can't do this because 3.14159 is a double and not a string
+
+//        long myNumber;
+//        long myNumber = 3.14; //unable to do this because it is not a long type
+//        long myNumber = 3.14; //L means long literal value. so the 123L fits into the long myNumber
+//        System.out.println(myNumber); //we can't do this because we haven't declared a variable value for myNumber
+
+        float myNumber = (float) 3.14; // the f denotes a 4 byte float literal
         System.out.println(myNumber);
-        float newMyNumber = (float) myNumber; // so we can re-assign the value from long to float
-        System.out.println(newMyNumber);
 
 //        int x = 5; //created variable for x
 //        System.out.println(x++); //prints the value of x THEN increments
 //        System.out.println(x); //prints the value of x following incrementation
 
-//        int y = 5; //created variable for y
-//        System.out.println(++y); //returns the increment THEN the value of y
-//        System.out.println(y); //prints value of y following incrementation
+//        int x = 5; //created variable for x
+//        System.out.println(++x); //returns the increment THEN the value of y
+//        System.out.println(x); //prints value of y following incrementation
+
+//        String class; //unable to do this because class is a reserved word
 
 //        String theNumberThree = "three";
 //        Object o = theNumberThree;
 //        int three = (int) o;
-//        System.out.println(three);
+//        System.out.println(three); // strings can not be cast to integers
 
 //        int x = 4;
 //        x += 5;
