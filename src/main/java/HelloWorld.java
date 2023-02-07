@@ -70,34 +70,5 @@ public class HelloWorld {
 //        System.out.println("Howdy " + myName + ", age: " + a + " makes " + c + " bucks per hour");
 //        System.out.printf("Howdy %s, age: %d makes %f bucks per hour%n", myName, a, c);
 
-        Scanner input = new Scanner(System.in);
-
-        System.out.print("Enter your age: ");
-
-        int age = input.nextInt();
-        System.out.println("Your age is " + age);
-
-        input.nextLine(); //this resets the "enter" key so that the console won't run through to completion. Comment this out and run it to see what I mean
-
-        System.out.print("Enter your name: ");
-
-//        String aName = input.next();
-//        System.out.println("Your first name is: " + aName);
-//
-//        aName = input.next();
-//        System.out.println("Your last name is: " + aName);
-
-        String newName = input.nextLine();
-        System.out.println("Your name is " + newName);
-
-//        System.out.print("Enter your age: ");
-//
-//        int age = input.nextInt();
-//        System.out.println("Your age is " + age);
-
-
-        input.close(); // close the program when finished with it
-
-        //create the scanner outside the loop, and close it outside the loop
     }
 }
