@@ -52,22 +52,20 @@ public class ControlFlowExercises {
 //        }
 
         //TABLE OF POWERS
-        Scanner input = new Scanner(System.in);
-
-        System.out.print("Enter an Integer: ");
-        String userInput = input.nextLine();
-        int userNum = Integer.parseInt(userInput);
+        Scanner powerInput = new Scanner(System.in);
 
         String userChoice;
         boolean userContinue = true;
 
         do {
             //printing the table of powers based on the user input
-
             System.out.print("Would you like to continue? [Y/N]: ");
-            userChoice = input.nextLine();
+            userChoice = powerInput.nextLine();
 
             if (userChoice.equalsIgnoreCase("Y")) {
+                System.out.print("Enter an Integer: ");
+                String userInput = powerInput.nextLine();
+                int userNum = Integer.parseInt(userInput);
                 System.out.println("""
                     number | squared | cubed
                     -------|---------|------""");
@@ -82,13 +80,14 @@ public class ControlFlowExercises {
             } else {
                 userContinue = false;
             }
-
         } while (userContinue);
+        powerInput.close();
+
 
             //CONVERT NUMBER GRADES TO LETTER GRADES
+        Scanner gradeConversion = new Scanner(System.in);
 
-
-            input.close();
+        gradeConversion.close();
     }
 
 }
