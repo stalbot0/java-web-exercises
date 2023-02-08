@@ -66,6 +66,7 @@ public class ControlFlowExercises {
                 System.out.print("Enter an Integer: ");
                 String userInput = powerInput.nextLine();
                 int userNum = Integer.parseInt(userInput);
+
                 System.out.println("""
                     number | squared | cubed
                     -------|---------|------""");
@@ -77,6 +78,7 @@ public class ControlFlowExercises {
                                 %-7d| %-8d| %d%n"""
                             , n, square, cubed);
                 }
+
             } else {
                 userContinue = false;
             }
