@@ -20,7 +20,7 @@ public class Bob {
             }
             System.out.println(bobsResponse);
 
-            System.out.println("Continue the conversation? [Yes/No]");
+            System.out.print("Continue the conversation? [Yes/No]: ");
             String contConvo = bob.nextLine();
 
             if(contConvo.equalsIgnoreCase("no")) {
