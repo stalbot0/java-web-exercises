@@ -8,7 +8,11 @@ public class StringExercise {
         System.out.println(noEdu);
 
         String checkItOut = "Check \"this\" out!, \"s inside of \"s!\n";
+        String checkItOut2 = """
+                Check "this" out!, "s inside of "s!
+                """;
         System.out.println(checkItOut);
+        System.out.println(checkItOut2);
 
         String windowsDrive = "In windows, the main drive is usually C:\\";
         System.out.println(windowsDrive);
