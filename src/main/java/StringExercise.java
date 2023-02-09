@@ -1,11 +1,11 @@
 public class StringExercise {
 
     public static void main(String[] args) {
-        String noEdu = "We don't need no education";
+        String noEdu = """
+                We don't need no education
+                We don't need no thought control
+                """;
         System.out.println(noEdu);
-
-        String noThoughtCtrl = "We don't need no thought control";
-        System.out.println(noThoughtCtrl);
 
         String checkItOut = "Check \"this\" out!, \"s inside of \"s!\n";
         System.out.println(checkItOut);
