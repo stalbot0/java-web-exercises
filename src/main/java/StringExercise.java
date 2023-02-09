@@ -7,8 +7,7 @@ public class StringExercise {
         String noThoughtCtrl = "We don't need no thought control";
         System.out.println(noThoughtCtrl);
 
-        char value = '"';
-        String checkItOut = "Check " + value + "this" + value + " out!, " + value + "s inside of " + value + "s!";
+        String checkItOut = "Check \"this\" out!, \"s inside of \"s!\n";
         System.out.println(checkItOut);
 
         String windowsDrive = "In windows, the main drive is usually C:\\";
