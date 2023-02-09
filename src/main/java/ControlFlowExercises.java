@@ -62,46 +62,45 @@ public class ControlFlowExercises {
 
         //TABLE OF POWERS
         Scanner input = new Scanner(System.in);
-//        String userChoice;
-//        boolean userContinue = true;
-//
-//        do {
-//            //printing the table of powers based on the user input
-//            System.out.print("Would you like to continue? [Y/N]: ");
-//            userChoice = input.nextLine();
-//
-//            if (userChoice.equalsIgnoreCase("Y")) {
-//                System.out.print("Enter an Integer: ");
-//                String userInput = input.nextLine();
-//                int userNum = Integer.parseInt(userInput);
-//
-//                System.out.println("""
-//                        number | squared | cubed
-//                        -------|---------|------""");
-//
-//                for (int n = 1; n <= userNum; n++) {
-//                    int square = (int) Math.pow(n, 2);
-//                    int cubed = (int) Math.pow(n, 3);
-//                    System.out.printf("""
-//                                    %-6d | %-7d | %d%n"""
-//                            , n, square, cubed);
-//                }
-//
-//            } else {
-//                userContinue = false;
-//            }
-//        } while (userContinue);
-//
+        String userChoice;
+        boolean userContinue = true;
+
+        do {
+            //printing the table of powers based on the user input
+            System.out.print("Would you like to continue? [Y/N]: ");
+            userChoice = input.nextLine();
+
+            if (userChoice.equalsIgnoreCase("Y")) {
+                System.out.print("Enter an Integer: ");
+                String userInput = input.nextLine();
+                int userNum = Integer.parseInt(userInput);
+
+                System.out.println("""
+                        number | squared | cubed
+                        -------|---------|------""");
+
+                for (int n = 1; n <= userNum; n++) {
+                    int square = (int) Math.pow(n, 2);
+                    int cubed = (int) Math.pow(n, 3);
+                    System.out.printf("""
+                                    %-6d | %-7d | %d%n"""
+                            , n, square, cubed);
+                }
+
+            } else {
+                userContinue = false;
+            }
+        } while (userContinue);
+
 //        input.close();
 
 
         //CONVERT NUMBER GRADES TO LETTER GRADES
-//        input = new Scanner(System.in);
-        input.nextLine();
+        input = new Scanner(System.in);
         do {
-            System.out.println("Enter a grade: ");
+            System.out.print("Enter a grade: ");
             int grade = Integer.parseInt(input.nextLine());
-            input.nextLine(); //clears out the new line of the buffer
+//            input.nextLine(); //clears out the new line of the buffer
             String letterGrade = "F";
             if (grade >= 88) {
                 letterGrade = "A";
