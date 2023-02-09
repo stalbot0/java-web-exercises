@@ -9,6 +9,11 @@ public class Bob {
             System.out.print("You: ");
             byeBob = bob.nextLine();
 
+            if(byeBob.equalsIgnoreCase("bye")) {
+                System.out.println("Bob: Bye, nerd.");
+                break;
+            }
+
             String bobsResponse;
             if (byeBob.endsWith("?")) {
                 bobsResponse = "Bob: Sure.";
@@ -21,10 +26,6 @@ public class Bob {
             }
             System.out.println(bobsResponse);
 
-            if(byeBob.equalsIgnoreCase("bye")) {
-                System.out.println("Bob: Bye, nerd.");
-                break;
-            }
         } while (true);
     }
 }
