@@ -78,7 +78,7 @@ public class MethodsExercises {
 //    }
 
     //4. dice-roller
-    public static String getRandomDieNum() {
+    public static void getRandomDieNum() {
         Scanner rollingDice = new Scanner(System.in);
         int dieMin = 1;
         int sides = rollingDice.nextInt();
@@ -88,7 +88,7 @@ public class MethodsExercises {
         String result1 = ("Die 1 rolled a " + randomDie);
         String result2 = ("Die 2 rolled a " + randomDie2);
         System.out.println(result1);
-        return result2;
+        System.out.println(result2);
     }
 
     //5.
@@ -116,7 +116,7 @@ public class MethodsExercises {
         //4
         do {
             System.out.println("How many sides do you want your dice to have?");
-            System.out.println(getRandomDieNum());
+            getRandomDieNum();
             System.out.println("Want to roll again?");
             yesNoMaybe = yesOrNo();
         } while (yesNoMaybe);
