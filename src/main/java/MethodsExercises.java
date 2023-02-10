@@ -29,11 +29,10 @@ public class MethodsExercises {
     //si or no?
     public static boolean yesOrNo() {
         Scanner yesOrNoInput = new Scanner(System.in);
-        System.out.print("Would you like to continue? [Yes/No]: ");
         String userInput = yesOrNoInput.nextLine();
-        if(userInput.equalsIgnoreCase("yes")) {
+        if (userInput.equalsIgnoreCase("yes") || userInput.equalsIgnoreCase("y")) {
             return true;
-        } else if (userInput.equalsIgnoreCase("no")) {
+        } else if (userInput.equalsIgnoreCase("no") || userInput.equalsIgnoreCase("n")) {
             return false;
         } else {
             System.out.println("This is not a valid input");
@@ -61,7 +60,8 @@ public class MethodsExercises {
         }
         return factorial;
     }
-//re-factor to use recursion
+
+    //re-factor to use recursion
 //        int userInput;
 //        long factorial;
 //
@@ -76,7 +76,22 @@ public class MethodsExercises {
 //        }
 //        return calcFactorial(min, max);
 //    }
+
     //4. dice-roller
+    public static String getRandomDieNum() {
+        Scanner rollingDice = new Scanner(System.in);
+        int dieMin = 1;
+        int sides = rollingDice.nextInt();
+        System.out.println("Rolling the Dice...");
+        int randomDie = (int) Math.round(Math.random() * (sides - dieMin) + dieMin);
+        int randomDie2 = (int) Math.round(Math.random() * (sides - dieMin) + dieMin);
+        String result1 = ("Die 1 rolled a " + randomDie);
+        String result2 = ("Die 2 rolled a " + randomDie2);
+        System.out.println(result1);
+        return result2;
+    }
+
+    //5.
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -87,14 +102,6 @@ public class MethodsExercises {
         System.out.println(MethodsExercises.division(16, 4));
         System.out.println(MethodsExercises.modulus(15, 3));
 
-//        //2
-//        int userInput = MethodsExercises.getInteger(1, 10);
-//        System.out.println("This is your number: " + userInput);
-
-//        //3
-//        long factorial = MethodsExercises.calcFactorial(userInput);
-//        System.out.println("This is your factorial: " + factorial);
-
         //2 and 3 combined
         boolean yesNoMaybe;
         do {
@@ -102,10 +109,20 @@ public class MethodsExercises {
             System.out.println("This is your number: " + userInput);
             long factorial = MethodsExercises.calcFactorial(userInput);
             System.out.println("This is your factorial: " + factorial);
+            System.out.print("Would you like to continue? [Y/N]: ");
             yesNoMaybe = yesOrNo();
         } while (yesNoMaybe);
 
         //4
+        do {
+            System.out.println("How many sides do you want your dice to have?");
+            System.out.println(getRandomDieNum());
+            System.out.println("Want to roll again?");
+            yesNoMaybe = yesOrNo();
+        } while (yesNoMaybe);
+
+        //5
+
     }
 
 
