@@ -91,7 +91,6 @@ public class MethodsExercises {
         String result2 = ("Die 2 rolled a " + randomDie2);
         System.out.println(result1);
         System.out.println(result2);
-        //How to return BOTH values??
     }
 
     public static void main(String[] args) {
@@ -121,6 +120,7 @@ public class MethodsExercises {
             System.out.print("Want to roll again? [Y/N]: ");
             yesNoMaybe = yesOrNo();
         } while (yesNoMaybe);
+        System.out.println("Done Rolling!");
 
         //5
 
