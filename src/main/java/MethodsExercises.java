@@ -47,6 +47,8 @@ public class MethodsExercises {
         int userInt = input.nextInt();
         if (userInt >= min && userInt <= max) {
             return userInt;
+        } else {
+            System.out.println("This is not a valid input.");
         }
         return getInteger(min, max);
     }
