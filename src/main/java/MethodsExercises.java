@@ -43,7 +43,7 @@ public class MethodsExercises {
     //2. method validation
     public static int getInteger(int min, int max) {
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter a number between 1 and 10: ");
+        System.out.printf("Enter a number between %d and %d: ", min, max);
         int userInt = input.nextInt();
         if (userInt >= min && userInt <= max) {
             return userInt;
@@ -89,9 +89,8 @@ public class MethodsExercises {
         String result2 = ("Die 2 rolled a " + randomDie2);
         System.out.println(result1);
         System.out.println(result2);
+        //How to return BOTH values??
     }
-
-    //5.
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -106,9 +105,9 @@ public class MethodsExercises {
         boolean yesNoMaybe;
         do {
             int userInput = MethodsExercises.getInteger(1, 10);
-            System.out.println("This is your number: " + userInput);
+            System.out.println("Your number: " + userInput);
             long factorial = MethodsExercises.calcFactorial(userInput);
-            System.out.println("This is your factorial: " + factorial);
+            System.out.println("Factorial: " + factorial);
             System.out.print("Would you like to continue? [Y/N]: ");
             yesNoMaybe = yesOrNo();
         } while (yesNoMaybe);
@@ -117,7 +116,7 @@ public class MethodsExercises {
         do {
             System.out.println("How many sides do you want your dice to have?");
             getRandomDieNum();
-            System.out.println("Want to roll again?");
+            System.out.print("Want to roll again? [Y/N]: ");
             yesNoMaybe = yesOrNo();
         } while (yesNoMaybe);
 
