@@ -2,11 +2,6 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class HighLow {
-    public static void main(String[] args) {
-        System.out.println("I'm thinking of a number between 1 and 100. Try to guess what my number is..");
-        int highLow = HighLow.randomNum();
-    }
-
     public static int randomNum() {
         Scanner input = new Scanner(System.in);
         Random newRandomNum = new Random();
@@ -27,5 +22,10 @@ public class HighLow {
             }
         } while (true);
         return newestRandomNum;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("I'm thinking of a number between 1 and 100. Try to guess what my number is..");
+        int highLow = HighLow.randomNum();
     }
 }
