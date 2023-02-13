@@ -3,10 +3,10 @@ import java.util.Scanner;
 
 public class HighLow {
     public static int randomNum() {
-        Scanner input = new Scanner(System.in);
+//        Scanner input = new Scanner(System.in); // we can remove the scanner because the other public methods have a new Scanner in each
         Random newRandomNum = new Random();
         int newestRandomNum = newRandomNum.nextInt(100) + 1;
-//        System.out.println(newestRandomNum);
+//        System.out.println(newestRandomNum); // output random num to ensure that our method is working
 
         boolean goodGuess = true;
         do {
@@ -15,9 +15,9 @@ public class HighLow {
             if (userNum == newestRandomNum) {
                 System.out.printf("GOOD GUESS!, %d was my number!", newestRandomNum);
                 break;
-            } if (userNum > newestRandomNum) {
+            } else if (userNum > newestRandomNum) {
                 System.out.println("LOWER");
-            } if (userNum < newestRandomNum) {
+            } else {
                 System.out.println("HIGHER");
             }
         } while (true);
@@ -25,7 +25,7 @@ public class HighLow {
     }
 
     public static void main(String[] args) {
-        System.out.println("I'm thinking of a number between 1 and 100. Try to guess what my number is..");
+        System.out.println("I'm thinking of a number between 1 and 100. Try to guess what my number is.. ");
         int highLow = HighLow.randomNum();
     }
 }
