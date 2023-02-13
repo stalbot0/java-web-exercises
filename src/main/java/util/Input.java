@@ -32,13 +32,13 @@ public class Input {
     }
 
     int getInt() {
-        System.out.print("Enter an integer: ");
+        System.out.print("Enter a Number: ");
         return this.scanner.nextInt();
     }
 
     double getDouble(double min, double max) {
         System.out.printf("Enter a number between %f and %f: ", min, max);
-        double userDouble = Double.parseDouble(this.scanner.nextLine());
+        double userDouble = this.scanner.nextDouble();
         if (userDouble >= min && userDouble <= max) {
             return userDouble;
         } else {
@@ -48,7 +48,7 @@ public class Input {
     }
 
     public double getDouble() {
-        System.out.print("Enter an integer: ");
+        System.out.print("Enter a number: ");
         return this.scanner.nextDouble();
     }
 
