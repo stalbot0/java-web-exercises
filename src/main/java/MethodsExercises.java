@@ -76,8 +76,8 @@ public class MethodsExercises {
         int dieMin = 1;
         int sides = rollingDice.nextInt();
         System.out.println("Rolling the Dice...");
-        int randomDie = (int) Math.round(Math.random() * (sides - dieMin) + dieMin);
-        int randomDie2 = (int) Math.round(Math.random() * (sides - dieMin) + dieMin);
+        int randomDie = (int) Math.floor(Math.random() * (sides - dieMin) + dieMin);
+        int randomDie2 = (int) Math.floor(Math.random() * (sides - dieMin) + dieMin);
         String result1 = ("Die 1 rolled a " + randomDie);
         String result2 = ("Die 2 rolled a " + randomDie2);
         System.out.println(result1);
@@ -93,7 +93,7 @@ public class MethodsExercises {
         System.out.println(MethodsExercises.division(16, 4));
         System.out.println(MethodsExercises.modulus(17, 6));
 
-        //2 and 3 combined
+        //2 and 3 combined (verification and calculating factorial)
         boolean yesNoMaybe;
         do {
             int userInput = MethodsExercises.getInteger(1, 10);
@@ -103,8 +103,9 @@ public class MethodsExercises {
             System.out.print("Would you like to continue? [Y/N]: ");
             yesNoMaybe = yesOrNo();
         } while (yesNoMaybe);
+//        System.out.println(factorialRecursion(3));
 
-        //4
+        //4 (rolling the dice)
         do {
             System.out.println("How many sides do you want your dice to have?");
             getRandomDieNum();
@@ -114,6 +115,5 @@ public class MethodsExercises {
         System.out.println("Done Rolling!");
 
     }
-
 
 }
