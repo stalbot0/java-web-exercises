@@ -9,12 +9,14 @@ public class Input {
         this.scanner = new Scanner(System.in);
     }
 
+
     public String getString() {
         return this.scanner.nextLine();
     }
 
-    boolean yesNo() {
-        String booleanInput = this.scanner.nextLine();
+    public boolean yesNo() {
+        String booleanInput = this.scanner.next();
+        this.scanner.nextLine();
         return booleanInput.equalsIgnoreCase("y") || booleanInput.equalsIgnoreCase("yes");
     }
 
@@ -36,7 +38,7 @@ public class Input {
 
     double getDouble(double min, double max) {
         System.out.printf("Enter a number between %f and %f: ", min, max);
-        double userDouble = this.scanner.nextInt();
+        double userDouble = Double.parseDouble(this.scanner.nextLine());
         if (userDouble >= min && userDouble <= max) {
             return userDouble;
         } else {
@@ -45,7 +47,7 @@ public class Input {
         return getDouble(min, max);
     }
 
-    double getDouble() {
+    public double getDouble() {
         System.out.print("Enter an integer: ");
         return this.scanner.nextDouble();
     }
