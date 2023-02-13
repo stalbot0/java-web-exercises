@@ -21,8 +21,8 @@ public class HighLow {
             } else {
                 System.out.println("HIGHER");
             }
-            userGuess++;
 
+            userGuess++;
             if(userGuess > 5) {
                 System.out.printf("Too many guesses, my number was %d", newestRandomNum);
                 break;
