@@ -7,7 +7,7 @@ public class HighLow {
         Random newRandomNum = new Random();
         int newestRandomNum = newRandomNum.nextInt(100) + 1;
 //        System.out.println(newestRandomNum); // output random num to ensure that our method is working
-
+        System.out.println("I'm thinking of a number between 1 and 100. Try to guess what my number is.. ");
         boolean goodGuess = true;
         do {
             int userNum = MethodsExercises.getInteger(1, 100);
@@ -25,7 +25,6 @@ public class HighLow {
     }
 
     public static void main(String[] args) {
-        System.out.println("I'm thinking of a number between 1 and 100. Try to guess what my number is.. ");
         int highLow = HighLow.randomNum();
     }
 }
