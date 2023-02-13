@@ -28,5 +28,4 @@ public class HighLow {
         } while (true);
         return newestRandomNum;
     }
-
 }

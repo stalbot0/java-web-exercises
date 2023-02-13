@@ -26,7 +26,7 @@ public class MethodsExercises {
         return int1 % int2;
     }
 
-    //si or no?
+    //si or no for validation
     public static boolean yesOrNo() {
         Scanner yesOrNoInput = new Scanner(System.in);
         String userInput = yesOrNoInput.nextLine();
@@ -62,21 +62,12 @@ public class MethodsExercises {
         }
         return factorial;
     }
-
-    //re-factor to use recursion
-//        int userInput;
-//        long factorial;
-//
-//        System.out.print("Enter an integer between 1 and 10: ");
-//        userInput = input.nextInt();
-//        if (userInput >= min && userInput <= max) {
-//            factorial = 1;
-//            for (int i = 1; i <= userInput; i++) {
-//                factorial *= i;
-//            }
-//            return factorial;
+//   re-factor to use recursion
+//    public static long factorialRecursion(int userNum) {
+//        if (userNum == 1) {
+//            return 1;
 //        }
-//        return calcFactorial(min, max);
+//        return calcFactorial(userNum - 1) * userNum;
 //    }
 
     //4. dice-roller
@@ -100,7 +91,7 @@ public class MethodsExercises {
         System.out.println(MethodsExercises.subtraction(8, 6));
         System.out.println(MethodsExercises.multiplication(1, 3));
         System.out.println(MethodsExercises.division(16, 4));
-        System.out.println(MethodsExercises.modulus(15, 3));
+        System.out.println(MethodsExercises.modulus(17, 6));
 
         //2 and 3 combined
         boolean yesNoMaybe;
@@ -121,8 +112,6 @@ public class MethodsExercises {
             yesNoMaybe = yesOrNo();
         } while (yesNoMaybe);
         System.out.println("Done Rolling!");
-
-        //5
 
     }
 
