@@ -14,10 +14,20 @@ public class Input {
         return scanner.nextLine();
     }
 
+    public String getString(String prompt) {
+        System.out.println(prompt);
+        return getString();
+    }
+
     public boolean yesNo() {
         String booleanInput = scanner.next();
         scanner.nextLine();
         return booleanInput.equalsIgnoreCase("y") || booleanInput.equalsIgnoreCase("yes");
+    }
+
+    public boolean yesNo(String prompt) {
+        System.out.println(prompt);
+        return yesNo();
     }
 
     int getInt(int min, int max) {
