@@ -2,6 +2,8 @@ package shapes;
 
 import util.Input;
 
+import java.util.Arrays;
+
 public class CircleApp {
 
     public static void main(String[] args) {
@@ -13,5 +15,6 @@ public class CircleApp {
             System.out.printf("Area of your circle: %f%nCircumference of the circle: %f%n", userCircle.getArea(), userCircle.getCircumference());
             System.out.print("Would you like to make another circle? [Y/N]: ");
         } while (userRadiusInput.yesNo());
+        System.out.println("Bye!");
     }
 }
