@@ -6,23 +6,23 @@ public class Input {
     private Scanner scanner;
 
     public Input() {
-        this.scanner = new Scanner(System.in);
+        scanner = new Scanner(System.in);
     }
 
 
     public String getString() {
-        return this.scanner.nextLine();
+        return scanner.nextLine();
     }
 
     public boolean yesNo() {
-        String booleanInput = this.scanner.next();
-        this.scanner.nextLine();
+        String booleanInput = scanner.next();
+        scanner.nextLine();
         return booleanInput.equalsIgnoreCase("y") || booleanInput.equalsIgnoreCase("yes");
     }
 
     int getInt(int min, int max) {
-        System.out.printf("Enter a number between %d and %d: ", min, max);
-        int userInt = this.scanner.nextInt();
+        System.out.format("Enter a number between %d and %d: ", min, max);
+        int userInt = scanner.nextInt();
         if (userInt >= min && userInt <= max) {
             return userInt;
         } else {
@@ -33,12 +33,12 @@ public class Input {
 
     int getInt() {
         System.out.print("Enter a Number: ");
-        return this.scanner.nextInt();
+        return scanner.nextInt();
     }
 
     double getDouble(double min, double max) {
-        System.out.printf("Enter a number between %f and %f: ", min, max);
-        double userDouble = this.scanner.nextDouble();
+        System.out.format("Enter a number between %f and %f: ", min, max);
+        double userDouble = scanner.nextDouble();
         if (userDouble >= min && userDouble <= max) {
             return userDouble;
         } else {
@@ -49,22 +49,6 @@ public class Input {
 
     public double getDouble() {
         System.out.print("Enter a number: ");
-        return this.scanner.nextDouble();
-    }
-
-    public static void main(String[] args) {
-        Input myInput = new Input();
-
-        System.out.println(myInput.getString());
-
-        System.out.println(myInput.yesNo());
-
-        myInput.getInt(1, 50);
-
-        myInput.getInt();
-
-        myInput.getDouble(1, 50);
-
-        myInput.getDouble();
+        return scanner.nextDouble();
     }
 }
