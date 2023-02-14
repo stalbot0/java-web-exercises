@@ -11,7 +11,7 @@ public class InputTest {
         System.out.println(myInput.yesNo());
 
         System.out.println("getInt w/ args");
-        myInput.getInt(1, 50);
+        myInput.getInt(1, 50, "hello");
 
         System.out.println("getInt 0 arg");
         myInput.getInt();

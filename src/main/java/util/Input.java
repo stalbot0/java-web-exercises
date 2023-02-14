@@ -30,23 +30,22 @@ public class Input {
         return yesNo();
     }
 
-    int getInt(int min, int max) {
-        System.out.format("Enter a number between %d and %d: ", min, max);
+    public int getInt(int min, int max, String prompt) {
+        System.out.format(prompt);
         int userInt = scanner.nextInt();
         if (userInt >= min && userInt <= max) {
             return userInt;
         } else {
             System.out.println("This is not a valid input.");
         }
-        return getInt(min, max);
+        return getInt(min, max, prompt);
     }
 
-    int getInt() {
-        System.out.print("Enter a Number: ");
+    public int getInt() {
         return scanner.nextInt();
     }
 
-    double getDouble(double min, double max) {
+    public double getDouble(double min, double max) {
         System.out.format("Enter a number between %f and %f: ", min, max);
         double userDouble = scanner.nextDouble();
         if (userDouble >= min && userDouble <= max) {
