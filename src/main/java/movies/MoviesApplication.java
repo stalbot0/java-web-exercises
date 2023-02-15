@@ -30,7 +30,7 @@ public class MoviesApplication {
     }
 
     //print the menu
-    public static void printMenu() {
+    private static void printMenu() {
         System.out.println("""
                 
                 What would you like to do?
@@ -74,7 +74,7 @@ public class MoviesApplication {
         movies[movies.length - 1] = movie;
     }
 
-    public static void doUserChoice(int userNum) {
+    private static void doUserChoice(int userNum) {
         if (userNum == 1) {
             displayAllMovies();
         } else if (userNum == 2) {
