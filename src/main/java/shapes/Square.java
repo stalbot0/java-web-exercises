@@ -8,4 +8,15 @@ public class Square extends Rectangle {
         super(side, side);
     }
 
+    @Override
+    protected int getArea() {
+        System.out.println("Squares getArea");
+        return (int) Math.pow(side, 2);
+    }
+
+    @Override
+    protected int getPerimeter() {
+        System.out.println("Squares getPerimeter");
+        return 4 * side;
+    }
 }
