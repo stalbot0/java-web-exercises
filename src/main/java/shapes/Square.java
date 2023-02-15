@@ -11,7 +11,7 @@ public class Square extends Rectangle {
     @Override
     protected int getArea() {
         System.out.println("Squares getArea");
-        return (int) Math.pow(side, 2);
+        return side * side;
     }
 
     @Override
