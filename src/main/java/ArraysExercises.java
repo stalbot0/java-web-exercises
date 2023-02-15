@@ -35,7 +35,7 @@ public class ArraysExercises {
     //returns an array whose length is 1 greater than the passed around, with the passed person object at the end of the array
     public static Person[] addPerson(Person[] passedArr, Person newPerson) {
         Person[] newArr = Arrays.copyOf(passedArr, passedArr.length + 1);
-        newArr[newArr.length - 1] = newPerson;;
+        newArr[newArr.length - 1] = newPerson;
         return newArr;
     }
 

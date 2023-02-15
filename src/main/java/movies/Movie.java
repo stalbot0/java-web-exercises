@@ -19,7 +19,7 @@ public class Movie {
 
     @Override
     public String toString() {
-        return "\n" + name + " -- " + category;
+        return name + " -- " + category;
     }
 
     //accessors
