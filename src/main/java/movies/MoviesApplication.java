@@ -2,6 +2,8 @@ package movies;
 
 import util.Input;
 
+import java.util.Arrays;
+
 public class MoviesApplication {
 
     private static Movie[] movies;
@@ -18,7 +20,7 @@ public class MoviesApplication {
             printMenu();
 
             // getChoice from the user
-            int userChoice = userInput.getInt(0, 5, "Enter your choice: ");
+            int userChoice = userInput.getInt(0, 7, "Enter your choice: ");
 
             //do whatever the user chooses
             doUserChoice(userChoice);
@@ -45,32 +47,32 @@ public class MoviesApplication {
                 """);
     }
 
-    private static void checkCategory(String category) {
+    private static void checkAndDisplayCategory(String category) {
         //loop through each movie
+        System.out.printf("Displaying all %s movies...%n", category);
         for (Movie movie : movies) {
             if (movie.getCategory().equalsIgnoreCase(category)) {
-                System.out.format("""
-                        Showing all %s movies..
-                        %s --- %s%n""", movie.getCategory(), movie.getName(), movie.getCategory());
+                System.out.println(movie.getName());
             }
         }
     }
 
     public static void doUserChoice(int userNum) {
         if (userNum == 1) {
-            System.out.println(movies);
+            System.out.println("Displaying all movies...");
+            System.out.println(Arrays.toString(movies));
         } else if (userNum == 2) {
-            checkCategory("animated");
+            checkAndDisplayCategory("animated");
         } else if (userNum == 3) {
-            checkCategory("drama");
+            checkAndDisplayCategory("drama");
         } else if (userNum == 4) {
-            checkCategory("horror");
+            checkAndDisplayCategory("horror");
         } else if (userNum == 5) {
-            checkCategory("scifi");
+            checkAndDisplayCategory("scifi");
         } else if (userNum == 6) {
-            checkCategory("musical");
+            checkAndDisplayCategory("musical");
         } else if (userNum == 7) {
-            checkCategory("comedy");
+            checkAndDisplayCategory("comedy");
         } else {
             System.out.println("Bye!");
             System.exit(0);

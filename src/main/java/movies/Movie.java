@@ -17,6 +17,11 @@ public class Movie {
         this.category = category;
     }
 
+    @Override
+    public String toString() {
+        return "\n" + name + " -- " + category;
+    }
+
     //accessors
     public String getName() {
         return name;
