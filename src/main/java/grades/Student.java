@@ -26,7 +26,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "name = " + name + ", grades =" + grades;
+        return "name = " + name + ", grades = " + grades.toString() + ", average grade = " + getGradeAverage();
     }
 
     //accessors

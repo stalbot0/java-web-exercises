@@ -33,8 +33,6 @@ public class GradesApplication {
         createStudentGrades(mattguardiola, 100, 90, 92);
         students.putIfAbsent("mattguardiola", mattguardiola);
 
-        printStudentUsernames(students);
-        System.out.println("Which student would you like to see more information about?");
         doUserChoice(students);
     }
 
@@ -45,20 +43,26 @@ public class GradesApplication {
     }
 
     public static void printStudentUsernames(HashMap<String, Student> student) {
-        System.out.println("Here are the GitHub usernames of our students...");
+        System.out.println("GitHub Usernames...");
         Set<String> keys = student.keySet();
         for (String key : keys) {
 //            Student aStudent = students.get(key); // this would get the names of the students, not their GitHub usernames
-            System.out.println(key);
+            System.out.printf("|%s| ", key);
         }
+        System.out.println("\n");
     }
 
     public static void doUserChoice(HashMap<String, Student> passedMap) {
-        String userChoice = input.getString();
-        if (passedMap.containsKey(userChoice)) {;
-            System.out.println(passedMap.get(userChoice));
-        } else {
-            System.out.println("No usernames found");
-        }
+        do {
+            printStudentUsernames(passedMap);
+            System.out.println("Which student would you like to see more information about?");
+            String userChoice = input.getString();
+            if (passedMap.containsKey(userChoice)) {
+                ;
+                System.out.println(passedMap.get(userChoice));
+            } else {
+                System.out.println("No usernames found");
+            }
+        } while(input.yesNo("Would you like to continue?"));
     }
 }
