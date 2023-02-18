@@ -2,8 +2,7 @@ package groceryList;
 
 import util.Input;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class GroceriesApplication {
     private static Input input = new Input();
@@ -32,10 +31,10 @@ public class GroceriesApplication {
             createGroceryObject();
             userEnterItem();
         } else {
-            int userChoice = input.getInt(1, 3, "Would you like to\n1. Finalize the list\n2. Add an item\n3. Exit\n");
+            int userChoice = input.getInt(1, 3, "Would you like to...\n1. Finalize the list\n2. Add an item\n3. Exit\n\nEnter Option: ");
             if (userChoice == 1) {
                 System.out.println("Finalizing List");
-                //print the full list alphabetically and grouped by category, including quantity
+                printAllGroceries();
             } else if (userChoice == 2) {
                 userEnterItem();
             } else {
@@ -73,7 +72,7 @@ public class GroceriesApplication {
     //prints entire list of grocery objects
     public static void printAllGroceries() {
         for (Groceries grocery : allGroceries) {
-
+            System.out.printf("◘ Item: %s, Quantity: %d, Category: %s%n", grocery.getGroceryName(), grocery.getGroceryQuantity(), grocery.getGroceryCategory());
         }
     }
 }
