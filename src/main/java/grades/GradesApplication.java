@@ -63,6 +63,14 @@ public class GradesApplication {
             } else {
                 System.out.println("No usernames found");
             }
-        } while(input.yesNo("Would you like to continue?"));
+            System.out.println("Would you like to continue?");
+        } while(input.yesNo());
+    }
+
+    public static void viewAllGrades() {
+        String userViewsAllGrades = input.getString("Would you like to view all of the users grades?");
+        if (input.yesNo()) {
+
+        }
     }
 }

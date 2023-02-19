@@ -33,7 +33,7 @@ public class GroceriesApplication {
         } else {
             int userChoice = input.getInt(1, 3, "Would you like to...\n1. Finalize the list\n2. Add an item\n3. Exit\n\nEnter Option: ");
             if (userChoice == 1) {
-                System.out.println("Finalizing List");
+                System.out.println("Grocery List");
                 printAllGroceries();
             } else if (userChoice == 2) {
                 userEnterItem();
