@@ -4,22 +4,34 @@ public class InputTest {
     public static void main(String[] args) {
         Input myInput = new Input();
 
-        System.out.println("getString");
-        System.out.println(myInput.getString());
+//        System.out.println("getString");
+//        System.out.println(myInput.getString());
+//
+//        System.out.println("yesNo");
+//        System.out.println(myInput.yesNo());
+//
+//        System.out.println("getInt w/ args");
+//        myInput.getInt(1, 50, "hello");
+//
+//        System.out.println("getInt 0 arg");
+//        myInput.getInt();
+//
+//        System.out.println("getDub w/ args");
+//        myInput.getDouble(1, 50);
+//
+//        System.out.println("getDub 0 arg");
+//        myInput.getDouble();
+//
+//        System.out.print("Enter an integer: ");
+//        myInput.getInt();
 
-        System.out.println("yesNo");
-        System.out.println(myInput.yesNo());
+//        myInput.getInt(-100000, 1000000, "Enter an Integer: ");
 
-        System.out.println("getInt w/ args");
-        myInput.getInt(1, 50, "hello");
+//        myInput.getDouble(0, 10, "Enter a number between 1 and 10: ");
 
-        System.out.println("getInt 0 arg");
-        myInput.getInt();
+//        myInput.getDouble(0, 10);
 
-        System.out.println("getDub w/ args");
-        myInput.getDouble(1, 50);
-
-        System.out.println("getDub 0 arg");
+        System.out.print("Enter an integer: ");
         myInput.getDouble();
     }
 }
