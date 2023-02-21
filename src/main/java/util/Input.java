@@ -49,6 +49,23 @@ public class Input {
         }
     }
 
+    public int getInt(int min, int max) {
+        System.out.format("Enter a number between %f and %f: ", min, max);
+        try {
+//            double userDouble = scanner.nextDouble();
+            Integer userDouble = Integer.valueOf(getString());
+            if (userDouble >= min && userDouble <= max) {
+                return userDouble;
+            } else {
+                System.out.println("This is not a valid integer.");
+                return getInt(min, max);
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("This is not an integer. Try again.");
+            return getInt(min, max);
+        }
+    }
+
     public int getInt() {
 //        return scanner.nextInt();
         try {
