@@ -118,4 +118,16 @@ public class Input {
             return getDouble();
         }
     }
+
+//    public int getBinary() {
+////        return scanner.nextInt();
+//        String s = Integer.valueOf(getString(s, 2));
+//        try {
+//            String s = Integer.valueOf(getString(s, 2));
+//            return Integer.valueOf(getString(s));
+//        } catch (Exception e) {
+//            System.out.println("Invalid Binary input");
+//            return getBinary();
+//        }
+//    }
 }
