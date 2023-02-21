@@ -53,9 +53,9 @@ public class Input {
         System.out.format("Enter a number between %f and %f: ", min, max);
         try {
 //            double userDouble = scanner.nextDouble();
-            Integer userDouble = Integer.valueOf(getString());
-            if (userDouble >= min && userDouble <= max) {
-                return userDouble;
+            int userInt = Integer.valueOf(getString());
+            if (userInt >= min && userInt <= max) {
+                return userInt;
             } else {
                 System.out.println("This is not a valid integer.");
                 return getInt(min, max);
@@ -81,7 +81,7 @@ public class Input {
         System.out.format(prompt);
 //        double userDouble = scanner.nextDouble();
         try {
-            Double userDouble = Double.valueOf(getString());
+            double userDouble = Double.valueOf(getString());
             if (userDouble >= min && userDouble <= max) {
                 return userDouble;
             } else {
@@ -98,7 +98,7 @@ public class Input {
         System.out.format("Enter a number between %f and %f: ", min, max);
         try {
 //            double userDouble = scanner.nextDouble();
-            Double userDouble = Double.valueOf(getString());
+            double userDouble = Double.valueOf(getString());
             if (userDouble >= min && userDouble <= max) {
                 return userDouble;
             } else {
@@ -113,8 +113,7 @@ public class Input {
 
     public double getDouble() {
         try {
-            Double userDouble = Double.valueOf(getString());
-            return userDouble;
+            return Double.valueOf(getString());
         } catch (Exception e) {
             System.out.println("Invalid input");
             return getDouble();
