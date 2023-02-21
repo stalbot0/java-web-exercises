@@ -119,15 +119,29 @@ public class Input {
         }
     }
 
-//    public int getBinary() {
-////        return scanner.nextInt();
-//        String s = Integer.valueOf(getString(s, 2));
-//        try {
-//            String s = Integer.valueOf(getString(s, 2));
-//            return Integer.valueOf(getString(s));
-//        } catch (Exception e) {
-//            System.out.println("Invalid Binary input");
-//            return getBinary();
-//        }
-//    }
+    public int getBinary() {
+    int userInt = 0;
+//        return scanner.nextInt();
+        String s = getString();
+        try {
+            userInt = Integer.valueOf(s, 2);
+        } catch (Exception e) {
+            System.out.println("Invalid Binary input");
+            return getBinary();
+        }
+        return userInt;
+    }
+
+    public int getHex() {
+        int userInt = 0;
+//        return scanner.nextInt();
+        String s = getString();
+        try {
+            userInt = Integer.valueOf(s, 2);
+        } catch (Exception e) {
+            System.out.println("Invalid Hex input");
+            return getHex();
+        }
+        return userInt;
+    }
 }

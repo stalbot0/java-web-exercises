@@ -22,8 +22,10 @@ public class InputTest {
 //        System.out.println("getDub 0 arg");
 //        myInput.getDouble();
 //
-        System.out.print("Enter an integer: ");
-        myInput.getInt();
+//        System.out.print("Enter an integer: ");
+//        myInput.getInt();
+
+//        System.out.println(myInput.getBinary());
 
 //        myInput.getInt(-100000, 1000000, "Enter an Integer: ");
 
