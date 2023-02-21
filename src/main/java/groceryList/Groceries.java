@@ -1,9 +1,6 @@
 package groceryList;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Groceries {
     private String groceryName;
@@ -21,7 +18,20 @@ public class Groceries {
 
     @Override
     public String toString() {
-        return "Item - " + groceryName + ", Quantity - " + groceryQuantity + ", Category - " + groceryCategory;
+        return "Item - " + groceryName + ", Quantity - " + groceryQuantity;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Groceries groceries = (Groceries) o;
+        return Objects.equals(groceryName, groceries.groceryName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(groceryName);
     }
 
     //accessors

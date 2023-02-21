@@ -76,4 +76,6 @@ public class GradesApplication {
             System.out.println("go back to the doUserChoice method");
         }
     }
+
+    //print a menu for the options for the user (duh)
 }

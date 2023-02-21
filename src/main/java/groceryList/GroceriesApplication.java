@@ -7,9 +7,9 @@ import java.util.*;
 public class GroceriesApplication {
     private static Input input = new Input();
 
-    private static ArrayList<Groceries> allGroceries = new ArrayList<>();
+    private static ArrayList<Groceries> allGroceries = new ArrayList<Groceries>();
 
-    private static ArrayList<String> groceryCategories = new ArrayList<>(List.of("Bakery & Bread", "Meat & Seafood", "Pasta & Rice", "Cereals & Breakfast Foods", "Oils, Sauces, Salad Dressings, & Condiments", "Soups & Canned Goods", "Frozen Foods", "Dairy, Cheese & Eggs"));
+    private static ArrayList<String> groceryCategories = new ArrayList<>(List.of("Bakery & Bread", "Cereals & Breakfast Foods", "Dairy, Cheese & Eggs", "Frozen Foods", "Meat & Seafood", "Oils, Sauces, Salad Dressings, & Condiments", "Pasta & Rice", "Soups & Canned Goods"));
 
     public static void main(String[] args) {
         userCreateList();
@@ -54,8 +54,7 @@ public class GroceriesApplication {
         String userGrocery = input.getString("Enter a name: ");
         groceryObj.setGroceryName(userGrocery);
 
-        System.out.println("Enter a quantity: ");
-        int userQuantity = input.getInt();
+        int userQuantity = input.getInt(0, 1000, "Enter a Quantity: ");
         groceryObj.setGroceryQuantity(userQuantity);
 
         allGroceries.add(groceryObj);
@@ -69,10 +68,11 @@ public class GroceriesApplication {
         }
     }
 
-    //prints entire list of grocery objects
+    //prints entire list of grocery objects organized alphabetically and grouped by category
     public static void printAllGroceries() {
         for (Groceries grocery : allGroceries) {
             System.out.printf("◘ Item: %s, Quantity: %d, Category: %s%n", grocery.getGroceryName(), grocery.getGroceryQuantity(), grocery.getGroceryCategory());
         }
     }
+
 }
