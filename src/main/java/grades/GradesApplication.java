@@ -34,6 +34,7 @@ public class GradesApplication {
         students.putIfAbsent("mattguardiola", mattguardiola);
 
         doUserChoice(students);
+        viewAllGrades(students);
     }
 
     public static void createStudentGrades(Student student, int grade1, int grade2, int grade3) {
@@ -67,10 +68,12 @@ public class GradesApplication {
         } while(input.yesNo());
     }
 
-    public static void viewAllGrades() {
-        String userViewsAllGrades = input.getString("Would you like to view all of the users grades?");
+    public static void viewAllGrades(HashMap<String, Student> students) {
+        System.out.println("Would you like to view all of the users grades?");
         if (input.yesNo()) {
-
+            System.out.println("Display all students grades");
+        } else {
+            System.out.println("go back to the doUserChoice method");
         }
     }
 }
