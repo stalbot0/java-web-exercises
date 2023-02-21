@@ -69,8 +69,7 @@ public class Input {
     public int getInt() {
 //        return scanner.nextInt();
         try {
-            String userString = getString();
-            return Integer.valueOf(userString);
+            return Integer.valueOf(getString());
         } catch (Exception e) {
             System.out.println("Invalid input");
             return getInt();

@@ -22,8 +22,8 @@ public class InputTest {
 //        System.out.println("getDub 0 arg");
 //        myInput.getDouble();
 //
-//        System.out.print("Enter an integer: ");
-//        myInput.getInt();
+        System.out.print("Enter an integer: ");
+        myInput.getInt();
 
 //        myInput.getInt(-100000, 1000000, "Enter an Integer: ");
 
@@ -31,7 +31,7 @@ public class InputTest {
 
 //        myInput.getDouble(0, 10);
 
-        System.out.print("Enter an integer: ");
-        myInput.getDouble();
+//        System.out.print("Enter an integer: ");
+//        myInput.getDouble();
     }
 }
