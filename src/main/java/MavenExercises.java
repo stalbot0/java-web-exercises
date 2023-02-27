@@ -11,6 +11,7 @@ public class MavenExercises {
     public static void stringUtil() {
         System.out.format("Enter Something: ");
         String userInput = input.getString();
+
         System.out.format("You entered \"%s\"%n", userInput);
 
         boolean isNumeric = StringUtils.isNumeric(userInput);
