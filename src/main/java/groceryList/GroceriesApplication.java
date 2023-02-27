@@ -73,6 +73,7 @@ public class GroceriesApplication {
         for (Groceries grocery : allGroceries) {
             System.out.printf("◘ Item: %s, Quantity: %d, Category: %s%n", grocery.getGroceryName(), grocery.getGroceryQuantity(), grocery.getGroceryCategory());
         }
+        // updated for github
     }
 
 }
