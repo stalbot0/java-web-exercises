@@ -71,12 +71,13 @@ public class CohortTest extends TestCase {
     @Test
     public void testGetStudents() {
         Cohort dumbPpl = new Cohort();
+        assertEquals(0, dumbPpl.getStudents().size());
         Student dumbGuyOne = new Student(1, "Pea Brain");
         Student dumbGuyTwo = new Student(2, "Smol Brain Guy");
 
         dumbPpl.addStudent(dumbGuyOne);
         dumbPpl.addStudent(dumbGuyTwo);
 
-//        assertArrayEquals(0, dumbPpl.getStudents().size());
+        assertEquals(2, dumbPpl.getStudents().size());
     }
 }
