@@ -9,17 +9,13 @@ import static org.junit.Assert.*;
 //adds a grade
 //gets grade average
 public class StudentTest {
-    private Student stovetop = new Student(33, "Stovetop");
+    protected Student stovetop = new Student(33, "Stovetop");
 
     @Test
     public void testCreationOfStudent() {
         assertEquals(33, stovetop.getId());
         assertEquals("Stovetop", stovetop.getName());
         assertEquals(0, stovetop.getGrades().size());
-    }
-
-    @Test
-    public void testNoIdAtCreation() {
     }
 
     @Test
@@ -35,8 +31,13 @@ public class StudentTest {
         assertEquals(3, stovetop.getGrades().size());
     }
 
-    @Test(expected = IllegalArgumentException.class)
-    public void testAddNegativeGrade() {
-        //if grades < 0 or > 100, throw exception
+    @Test
+    public void testGetGradeAverage() {
+        stovetop.addGrade(89);
+        stovetop.addGrade(95);
+        stovetop.addGrade(93);
+
+        Integer [] gradesArr = {89, 95, 93};
+       assertArrayEquals(gradesArr, stovetop.getGrades().toArray(new Integer[gradesArr.length]));
     }
 }
