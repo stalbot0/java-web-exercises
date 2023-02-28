@@ -39,5 +39,6 @@ public class StudentTest {
 
         Integer [] gradesArr = {89, 95, 93};
        assertArrayEquals(gradesArr, stovetop.getGrades().toArray(new Integer[gradesArr.length]));
+       assertEquals(92.33, stovetop.getGradeAverage(), 0.1);
     }
 }

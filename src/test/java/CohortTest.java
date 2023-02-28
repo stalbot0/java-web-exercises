@@ -2,6 +2,11 @@ import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.junit.Assert.*;
+
 public class CohortTest extends TestCase {
 
 //    @Before
@@ -24,6 +29,8 @@ public class CohortTest extends TestCase {
 //        double cohortAvg = smartPpl.getCohortAverage();
 //    }
 
+    private List<Student> students;
+
     @Test
     public void testGetCohortAverage() {
         Cohort smartPpl = new Cohort();
@@ -43,7 +50,7 @@ public class CohortTest extends TestCase {
 
         double cohortAvg = smartPpl.getCohortAverage();
 
-        assertEquals(92.0, cohortAvg, 0.5);
+        assertEquals(92.5, cohortAvg, 0.1);
     }
 
     @Test
@@ -70,6 +77,6 @@ public class CohortTest extends TestCase {
         dumbPpl.addStudent(dumbGuyOne);
         dumbPpl.addStudent(dumbGuyTwo);
 
-//        assertEquals();
+//        assertArrayEquals(0, dumbPpl.getStudents().size());
     }
 }
