@@ -2,11 +2,11 @@ import java.util.Scanner;
 
 public class ConsoleExercises {
     public static void main(String[] args) {
-//        double pi = 3.14159;
-//        System.out.printf("The value of pi is approximately %.2f%n", pi);
-//        // we can use format to re-format our value into a string.
-//        String newPi = String.format("%.2f", pi);
-//        System.out.printf("The value of pi is approximately %s%n", newPi);
+        double pi = 3.14159;
+        System.out.printf("The value of pi is approximately %.2f%n", pi);
+        // we can use format to re-format our value into a string.
+        String newPi = String.format("%.2f", pi);
+        System.out.printf("The value of pi is approximately %s%n", newPi);
 
         Scanner input = new Scanner(System.in); //System.in tells the scanner to use the keyboard
 

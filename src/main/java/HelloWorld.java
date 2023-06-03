@@ -58,17 +58,17 @@ public class HelloWorld {
 //        System.out.println(x);
 //        System.out.println(y);
 //
-//        byte mostReventByte = 127;
-//        mostReventByte++;
-//        System.out.println(mostReventByte);
+//        byte mostRecentByte = 127;
+//        mostRecentByte++;
+//        System.out.println(mostRecentByte);
 
         //NOTES FROM LECTURE
 //        int a = 5;
 //        String myName = "Stephen";
 //        double c = 12.57;
 //
-//        System.out.println("Howdy " + myName + ", age: " + a + " makes " + c + " bucks per hour");
-//        System.out.printf("Howdy %s, age: %d makes %f bucks per hour%n", myName, a, c);
+//        System.out.println("Howdy " + myName + ", age: " + a + ", makes " + c + " bucks per hour");
+//        System.out.printf("Howdy %s, age: %d, makes %f bucks per hour%n", myName, a, c);
 
     }
 }

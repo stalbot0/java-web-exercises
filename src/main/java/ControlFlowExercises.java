@@ -3,6 +3,60 @@ import java.util.Scanner;
 
 public class ControlFlowExercises {
     public static void main(String[] args) {
+//        int i = 5;
+//        while (i <= 15) {
+//            System.out.printf("%d ", i);
+//            i++;
+//        }
+//        System.out.println();
+//
+//        int j = 2;
+//        System.out.println(j);
+//        do {
+//            j = (int) Math.pow(j, 2);
+//            System.out.println(j);
+//        } while (Math.pow(j, 2) < 1000000);
+
+//        for (int i = 1; i <= 100; i++) {
+//            if((i % 3 == 0) && (i % 5 ==0)) {
+//                System.out.println("FizzBuzz");
+//            } else if(i % 3 == 0) {
+//                System.out.println("Fizz");
+//            } else if(i % 5 == 0) {
+//                System.out.println("Buzz");
+//            } else {
+//                System.out.println(i);
+//            }
+//        }
+
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Please enter a number: ");
+//        int userNum = scanner.nextInt();
+//
+//        for (int i = 1; i <= userNum; i++) {
+//            int iSquared = (int) Math.pow(i, 2);
+//            int iCubed = (int) Math.pow(i, 3);
+//
+//            System.out.printf("""
+//                    %d | %d | %d%n""", i, iSquared, iCubed);
+//        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //        //LOOP BASICS
 //        //while
@@ -60,69 +114,68 @@ public class ControlFlowExercises {
 //            }
 //        }
 
-        //TABLE OF POWERS
-        Scanner input = new Scanner(System.in);
-        String userChoice;
-        boolean userContinue = true;
-
-        do {
-            //printing the table of powers based on the user input
-            System.out.print("Would you like to continue? [Y/N]: ");
-            userChoice = input.nextLine();
-
-            if (userChoice.equalsIgnoreCase("Y")) {
-                System.out.print("Enter an Integer: ");
-                String userInput = input.nextLine();
-                int userNum = Integer.parseInt(userInput);
-
-                System.out.println("""
-                        number | squared | cubed
-                        -------|---------|------""");
-
-                for (int n = 1; n <= userNum; n++) {
-                    int square = (int) Math.pow(n, 2);
-                    int cubed = (int) Math.pow(n, 3);
-                    System.out.printf("""
-                                    %-6d | %-7d | %d%n"""
-                            , n, square, cubed);
-                }
-
-            } else {
-                userContinue = false;
-            }
-        } while (userContinue);
-
+//        //TABLE OF POWERS
+//        Scanner input = new Scanner(System.in);
+//        String userChoice;
+//        boolean userContinue = true;
+//
+//        do {
+//            //printing the table of powers based on the user input
+//            System.out.print("Would you like to continue? [Y/N]: ");
+//            userChoice = input.nextLine();
+//
+//            if (userChoice.equalsIgnoreCase("Y")) {
+//                System.out.print("Enter an Integer: ");
+//                String userInput = input.nextLine();
+//                int userNum = Integer.parseInt(userInput);
+//
+//                System.out.println("""
+//                        number | squared | cubed
+//                        -------|---------|------""");
+//
+//                for (int n = 1; n <= userNum; n++) {
+//                    int square = (int) Math.pow(n, 2);
+//                    int cubed = (int) Math.pow(n, 3);
+//                    System.out.printf("""
+//                                    %-6d | %-7d | %d%n"""
+//                            , n, square, cubed);
+//                }
+//
+//            } else {
+//                userContinue = false;
+//            }
+//        } while (userContinue);
+//
+////        input.close();
+//
+//
+//        //CONVERT NUMBER GRADES TO LETTER GRADES
+//        input = new Scanner(System.in);
+//        do {
+//            System.out.print("Enter a grade: ");
+//            int grade = Integer.parseInt(input.nextLine());
+////            input.nextLine(); //clears out the new line of the buffer
+//            String letterGrade = "F";
+//            if (grade >= 88) {
+//                letterGrade = "A";
+//            } else if (grade >= 80) {
+//                letterGrade = "B";
+//            } else if (grade >= 67) {
+//                letterGrade = "C";
+//            } else if (grade >= 60) {
+//                letterGrade = "D";
+//            }
+//            System.out.println(letterGrade);
+//
+//            System.out.print("Continue? ");
+//            String keepGoing = input.nextLine();
+//            if (!keepGoing.equalsIgnoreCase("yes")) {
+//                break;
+//            }
+//        } while (true);
+//
 //        input.close();
-
-
-        //CONVERT NUMBER GRADES TO LETTER GRADES
-        input = new Scanner(System.in);
-        do {
-            System.out.print("Enter a grade: ");
-            int grade = Integer.parseInt(input.nextLine());
-//            input.nextLine(); //clears out the new line of the buffer
-            String letterGrade = "F";
-            if (grade >= 88) {
-                letterGrade = "A";
-            } else if (grade >= 80) {
-                letterGrade = "B";
-            } else if (grade >= 67) {
-                letterGrade = "C";
-            } else if (grade >= 60) {
-                letterGrade = "D";
-            }
-            System.out.println(letterGrade);
-
-            System.out.print("Continue? ");
-            String keepGoing = input.nextLine();
-            if (!keepGoing.equalsIgnoreCase("yes")) {
-                break;
-            }
-        } while (true);
-
-        input.close();
     }
-
 }
 
 
